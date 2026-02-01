@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bestiamie ✦  Chaos Server</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Comic+Neue:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      --neon-pink: #ff69b4;
+      --neon-cyan: #00ffff;
+      --neon-purple: #c300ff;
+      --card-bg: rgba(255, 255, 255, 0.08);
+      --text: #f0f0ff;
+      --glow: 0 0 20px rgba(255,105,180,0.7), 0 0 40px rgba(0,255,255,0.5);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    .stars {
+      position: fixed;
+      top:0; left:0; right:0; bottom:0;
+      pointer-events: none;
+      background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="10" cy="10" r="1" fill="white"/><circle cx="80" cy="30" r="1.5" fill="white"/><circle cx="50" cy="70" r="0.8" fill="white"/></svg>') repeat;
+      opacity: 0.4;
+      animation: drift 120s linear infinite;
+    }
+    @keyframes drift { from {background-position:0 0} to {background-position:100px 100px} }
+
+    header {
+      text-align: center;
+      padding: 120px 20px 80px;
+      position: relative;
+    }
+    h1 {
+      font-family: 'Comic Neue', cursive;
+      font-size: 5.5rem;
+      background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan), var(--neon-purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: var(--glow);
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+    @keyframes glow { from {text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--neon-pink)} to {text-shadow: 0 0 20px #fff, 0 0 30px var(--neon-cyan), 0 0 50px var(--neon-purple)} }
+    .subtitle { font-size: 1.6rem; margin: 20px 0; opacity: 0.9; }
+    .join-btn {
+      display: inline-block;
+      margin: 30px 15px;
+      padding: 18px 50px;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: white;
+      background: linear-gradient(45deg, var(--neon-pink), var(--neon-purple));
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: var(--glow);
+      transition: all 0.4s;
+    }
+    .join-btn:hover {
+      transform: scale(1.12) rotate(2deg);
+      box-shadow: 0 0 40px var(--neon-pink), 0 0 80px var(--neon-purple);
+    }
+
+    main { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    section { margin: 80px 0; }
+    h2 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 40px;
+      background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      transition: all 0.4s;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .card:hover { transform: translateY(-12px); box-shadow: var(--glow); }
+    .emoji-big { font-size: 4.5rem; margin-bottom: 15px; }
+    .rules li { font-size: 1.2rem; margin: 12px 0; list-style: none; }
+    .rules li:before { content: "✦ "; color: var(--neon-cyan); }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 1.1rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 4rem; }
+      .join-btn { padding: 14px 40px; font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stars"></div>
+
+  <header>
+    <h1>Bestiamie ✦</h1>
+    <p class="subtitle">Pecore 🐑✨  Mucche tsundere 🐮💢  Rane loli 🐸♡  Pingu yandere 🐧🔪</p>
+    <a href="https://discord.gg/DTVZ32Zu" class="join-btn" target="_blank">
+      ➤ Entra nel Server Chaos!
+    </a>
+  </header>
+
+  <main>
+    <section>
+      <h2>Canali Kawaii ma Caotici</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="emoji-big">🐑</div>
+          <h3>#pecore-pubbliche</h3>
+          <p>Chat per tutti i simp e le bestie normali (spoiler: nessuno è normale)</p>
+        </div>
+        <div class="card">
+          <div class="emoji-big">🐮</div>
+          <h3>#mucche-private</h3>
+          <p>Segreti, thirst trap e bestammie level 999</p>
+        </div>
+        <div class="card">
+          <div class="emoji-big">🐧</div>
+          <h3>#pingu</h3>
+          <p>Pinguini incazzati che droppano meme 24/7</p>
+        </div>
+        <div class="card">
+          <div class="emoji-big">🐸</div>
+          <h3>#rane-bimbi-speciali</h3>
+          <p>Per i bimbi mostruosi e le ranocchie cursed</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Regole del Villaggio ✿</h2>
+      <div class="card" style="max-width:700px; margin:0 auto;">
+        <ul class="rules">
+          <li>Bestemmie e meme ok, ma no hate pesante (ban con stile shonen)</li>
+          <li>Rispetta i canali privati o la mucca tsundere si arrabbia</li>
+          <li>No spam, no raid, no pedo/razzismo (one-shot ban)</li>
+          <li>Usa emoji animali o vieni considerato NPC</li>
+          <li>+18 vibes – entra se hai almeno 16 anni e stomaco forte</li>
+        </ul>
+      </div>
+    </section>
+
+    <section style="text-align:center;">
+      <a href="https://discord.gg/DTVZ32Zu" class="join-btn" target="_blank" style="font-size:2rem; padding:25px 70px;">
+        JOIN ORA O DIVENTA NPC FOREVER
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    Bestiemie Anime Edition ✦ 2026 • Made with love & cursed energy • Milano Night City Vibes
+  </footer>
+
+</body>
+</html>
